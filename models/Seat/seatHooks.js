@@ -1,4 +1,4 @@
-import seatSchema from "./seatSchema";
+import seatSchema from "./seatSchema.js";
 
 seatSchema.pre("save", function (next) {
   if (!this.isAvailable) {

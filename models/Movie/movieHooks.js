@@ -1,4 +1,4 @@
-import movieSchema from "./movieSchema";
+import movieSchema from "./movieSchema.js";
 
 movieSchema.pre("save", function (next) {
   if (this.title.includes("offensive")) {

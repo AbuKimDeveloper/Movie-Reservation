@@ -1,4 +1,4 @@
-import movieSchema from "./movieSchema";
+import movieSchema from "./movieSchema.js";
 
 movieSchema.virtual("durationInHours").get(function () {
   const hours = Math.floor(this.duration / 60);

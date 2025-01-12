@@ -1,4 +1,4 @@
-import movieScheduleSchema from "./movieScheduleSchema";
+import movieScheduleSchema from "./movieScheduleSchema.js";
 
 movieScheduleSchema.pre("save", function (next) {
   if (this.endDate && this.startDate > this.endDate) {

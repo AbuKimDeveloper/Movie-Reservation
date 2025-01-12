@@ -1,4 +1,4 @@
-import ticketSchema from "./ticketSchema";
+import ticketSchema from "./ticketSchema.js";
 
 ticketSchema.virtual("ticketStatus").get(function () {
   return this.status === "booked"

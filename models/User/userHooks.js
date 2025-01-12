@@ -1,4 +1,4 @@
-import userSchema from "./userSchema";
+import userSchema from "./userSchema.js";
 import bcrypt from "bcryptjs";
 
 userSchema.pre("save", async function (next) {
@@ -7,6 +7,10 @@ userSchema.pre("save", async function (next) {
   this.password = await bcrypt.hash(this.password, salt);
   next();
 });
+
+userSchema.methods.comparePassword = async function (candidatePassword) {
+  return await bcrypt.compare(candidatePassword, this.password);
+};
 
 userSchema.post("save", function (doc) {
   //send a welcome email

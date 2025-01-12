@@ -1,4 +1,4 @@
-import movieScheduleSchema from "./movieScheduleSchema";
+import movieScheduleSchema from "./movieScheduleSchema.js";
 
 movieScheduleSchema.virtual("nextScreeningDate").get(function () {
   const currentDate = new Date();

@@ -1,4 +1,4 @@
-import ticketSchema from "./ticketSchema";
+import ticketSchema from "./ticketSchema.js";
 
 ticketSchema.pre("save", function (next) {
   if (this.status === "booked" && this.screeningId.status === "cancelled") {

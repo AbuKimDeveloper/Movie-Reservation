@@ -1,4 +1,4 @@
-import screeningSchema from "./screeningSchema";
+import screeningSchema from "./screeningSchema.js";
 
 screeningSchema.pre("save", function (next) {
   if (this.availableSeats < 0) {

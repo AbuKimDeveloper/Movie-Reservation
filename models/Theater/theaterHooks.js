@@ -1,4 +1,4 @@
-import theaterSchema from "./theaterSchema";
+import theaterSchema from "./theaterSchema.js";
 
 theaterSchema.pre("save", async function (next) {
   if (this.totalSeats !== this.seats.length) {

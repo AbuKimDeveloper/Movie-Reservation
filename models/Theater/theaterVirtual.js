@@ -1,4 +1,4 @@
-import theaterSchema from "./theaterSchema";
+import theaterSchema from "./theaterSchema.js";
 
 theaterSchema.virtual("availableSeats").get(async function () {
   const screenings = await mongoose
